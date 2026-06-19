@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="todo-box">
+
+        <div class="header">
+            <h1>TaskMaster</h1>
+            <p>Organize your day with ease.</p>
+        </div>
+
+        <!-- Add Task -->
+        <div class="task-input">
+
+            <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a task...">
+
+            <input
+            type="date"
+            id="taskDate">
+
+            <input
+            type="time"
+            id="taskTime">
+
+            <button id="addTask">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="searchTask"
+            placeholder="Search task...">
+
+        </div>
+
+        <!-- Filter Buttons -->
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="pending">
+                Pending
+            </button>
+
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="totalTasks">0</h2>
+                <span>Total</span>
+            </div>
+
+            <div class="card">
+                <h2 id="pendingTasks">0</h2>
+                <span>Pending</span>
+            </div>
+
+            <div class="card">
+                <h2 id="completedTasks">0</h2>
+                <span>Completed</span>
+            </div>
+
+        </div>
+
+        <!-- Task List -->
+
+        <ul id="taskList">
+
+        </ul>
+
+        <!-- Empty State -->
+
+        <div id="emptyState">
+
+            <i class="fa-regular fa-face-smile"></i>
+
+            <h3>No Tasks Yet</h3>
+
+            <p>
+                Add your first task and start being productive.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
